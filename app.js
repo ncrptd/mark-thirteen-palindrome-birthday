@@ -2,7 +2,10 @@
 function reverseStr(str) {
   return str.split("").reverse().join("");
 }
-console.log(reverseStr("hello"));
+function checkPalindrome(str) {
+  return str === reverseStr(str);
+}
+console.log(checkPalindrome("racecar"));
 // let dateInput = document.querySelector("#birth-date");
 // let showButton = document.querySelector(".show-button");
 // let output = document.querySelector(".output");
