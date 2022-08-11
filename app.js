@@ -5,7 +5,28 @@ function reverseStr(str) {
 function checkPalindrome(str) {
   return str === reverseStr(str);
 }
-console.log(checkPalindrome("racecar"));
+
+function convertDateToStr(date) {
+  let strDate = { day: "", month: "", year: "" };
+  if (date.day < 10) {
+    strDate.day = "0" + date.day;
+  } else {
+    strDate.day = date.day;
+  }
+  if (date.month < 10) {
+    strDate.month = "0" + date.month;
+  } else {
+    strDate.month = date.month;
+  }
+  strDate.year = date.year;
+  return strDate;
+}
+let date = {
+  day: 1,
+  month: 1,
+  year: 2020,
+};
+console.log(convertDateToStr(date));
 // let dateInput = document.querySelector("#birth-date");
 // let showButton = document.querySelector(".show-button");
 // let output = document.querySelector(".output");
