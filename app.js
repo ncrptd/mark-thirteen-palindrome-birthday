@@ -91,7 +91,19 @@ function getNextDate(date) {
   }
 }
 
-// function getNextPalindromeDate(date) {}
+function getNextPalindromeDate(date) {
+  let nextDate = nextDate(date);
+  let ctr = 0;
+  while (true) {
+    ctr++;
+    let isPalindrome = checkPalindromeForAllDateFormats(nextDate);
+    if (isPalindrome) {
+      break;
+    }
+  }
+  nextDate = getNextDate(nextDate);
+  return [ctr, nextDate];
+}
 // let dateInput = document.querySelector("#birth-date");
 // let showButton = document.querySelector(".show-button");
 // let output = document.querySelector(".output");
